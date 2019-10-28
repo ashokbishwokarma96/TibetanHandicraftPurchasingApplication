@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:src="@drawable/mainlogo"
-        android:padding="10dp"/>
+        android:padding="5dp"/>
 
     <Button
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
         android:gravity="center"
         android:background="@drawable/round_button"
         android:layout_marginTop="20dp"
-        android:text="Sign In 'i am already a customer'"/>
+        android:text="Log In 'i am already a customer'"/>
 
     <Button
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
         android:gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/round_button"
-        android:text="create an account'i am new a customer'"/>
+        android:text="create an account 'i am new a customer'"/>
 
 
 </LinearLayout>
