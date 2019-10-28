@@ -16,6 +16,7 @@
         android:src="@drawable/loginlogo"/>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextEmailLogIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -24,11 +25,12 @@
         >
 
         <EditText
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="E-mail"
             android:ems="10"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textSize="20sp"
 
 
@@ -38,6 +40,7 @@
 
     </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/editTextPasswordLogIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:focusable="true"
@@ -58,6 +61,7 @@
             />
     </com.google.android.material.textfield.TextInputLayout>
     <Button
+        android:id="@+id/buttonLoginLogin"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="Login"
