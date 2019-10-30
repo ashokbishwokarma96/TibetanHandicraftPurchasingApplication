@@ -5,11 +5,12 @@
     >
 
     <solid
-        android:color="@color/blue"
+        android:color="@color/yellow"
         />
 
     <corners
         android:radius="50dp"
         />
+
 
 </shape>

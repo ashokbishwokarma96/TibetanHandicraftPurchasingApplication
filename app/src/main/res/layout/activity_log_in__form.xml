@@ -6,19 +6,20 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
-    android:gravity="center"
+    android:gravity="center_horizontal"
+    android:background="@color/black"
     tools:context=".LogIn_Form">
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:padding="10dp"
-        android:src="@drawable/loginlogo"/>
+        android:layout_height="300dp"
+        android:src="@drawable/logo_login"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/editTextEmailLogIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/White"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:layout_marginTop="5dp"
@@ -30,11 +31,9 @@
             android:layout_height="wrap_content"
             android:hint="E-mail"
             android:ems="10"
-            android:inputType="textEmailAddress"
-            android:textSize="20sp"
-
-
-            />
+            android:fontFamily="serif"
+            android:textColor="@color/White"
+            android:textSize="20sp"/>
 
 
 
@@ -43,11 +42,12 @@
         android:id="@+id/editTextPasswordLogIn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/White"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:layout_marginTop="5dp"
         app:passwordToggleEnabled="true"
-        >
+        app:passwordToggleTint="@color/White">
 
 
 
@@ -56,18 +56,19 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:ems="10"
+            android:fontFamily="serif"
+            android:textColorHint="@color/White"
             android:inputType="textPassword"
-            android:textSize="20sp"
-            />
+            android:textSize="20sp"/>
     </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/buttonLoginLogin"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:text="Login"
-        android:textSize="22sp"
-        android:textColor="#fff"
         android:layout_marginTop="40dp"
+        android:textSize="16dp"
+        android:fontFamily="serif"
         android:background="@drawable/round_button"/>
 
 

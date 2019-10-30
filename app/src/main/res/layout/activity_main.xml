@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="30dp"
+    android:padding="10dp"
+    android:gravity="center_horizontal"
+    android:background="@color/black"
     tools:context=".DashboardActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        android:src="@drawable/mainlogo"
-        android:padding="5dp"/>
+        android:src="@drawable/logo_yellow_white"/>
 
     <Button
         android:id="@+id/buttonLogInDashboard"
@@ -21,7 +22,8 @@
         android:fontFamily="serif"
         android:gravity="center"
         android:background="@drawable/round_button"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
         android:text="Log In 'i am already a customer'"/>
 
     <Button
@@ -30,7 +32,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="serif"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:textSize="16dp"
         android:background="@drawable/round_button"
         android:text="create an account 'i am new a customer'"/>
 
