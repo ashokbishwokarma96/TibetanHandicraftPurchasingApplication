@@ -44,7 +44,7 @@ public class LogIn_Form extends AppCompatActivity implements View.OnClickListene
                     editTextPasswordLogIn.requestFocus();
                     return;
                 }else{
-                if(editTextEmailLogIn.getEditText().toString() == "Admin" && editTextPasswordLogIn.getEditText().toString() == "admin"){
+                if(editTextEmailLogIn.getEditText().toString().equals("Admin") && editTextPasswordLogIn.getEditText().toString().equals("admin") ){
                     Intent intent = new Intent(LogIn_Form.this,DashboardActivity.class);
                     startActivity(intent);
                     Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
