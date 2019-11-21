@@ -48,6 +48,8 @@ public class LogIn_Form extends AppCompatActivity implements View.OnClickListene
                     Intent intent = new Intent(LogIn_Form.this,DashboardActivity.class);
                     startActivity(intent);
                     Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(this, "Wrong Username and Password", Toast.LENGTH_SHORT).show();
                 }
                 }
 
