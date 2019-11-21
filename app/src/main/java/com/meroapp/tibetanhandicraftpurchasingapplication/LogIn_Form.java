@@ -2,6 +2,7 @@ package com.meroapp.tibetanhandicraftpurchasingapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -33,16 +34,23 @@ public class LogIn_Form extends AppCompatActivity implements View.OnClickListene
         switch (view.getId()) {
 
             case R.id.buttonLoginLogin:
+
                 if (TextUtils.isEmpty(editTextEmailLogIn.getEditText().getText())) {
                     editTextEmailLogIn.setError("Enter Email Address Please");
                     editTextEmailLogIn.requestFocus();
+                    return;
                 } else if (TextUtils.isEmpty(editTextPasswordLogIn.getEditText().getText())) {
                     editTextPasswordLogIn.setError("Enter Password Please");
                     editTextPasswordLogIn.requestFocus();
+                    return;
                 }else{
-                    Toast.makeText(this, "Log in", Toast.LENGTH_LONG).show();
+                if(editTextEmailLogIn.getEditText().toString() == "Admin" && editTextPasswordLogIn.getEditText().toString() == "admin"){
+                    Intent intent = new Intent(LogIn_Form.this,DashboardActivity.class);
+                    startActivity(intent);
+                    Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
                 }
-                break;
+                }
+
 
 
         }
