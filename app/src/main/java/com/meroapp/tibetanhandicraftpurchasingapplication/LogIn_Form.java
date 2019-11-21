@@ -7,14 +7,15 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LogIn_Form extends AppCompatActivity implements View.OnClickListener {
 
-    private TextInputLayout editTextEmailLogIn,editTextPasswordLogIn;
-    private Button buttonLoginLogin;
+    private EditText editTextEmailLogIn,editTextPasswordLogIn;
+    private Button buttonLoginLogin,buttonRegisterLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +25,10 @@ public class LogIn_Form extends AppCompatActivity implements View.OnClickListene
         editTextEmailLogIn=findViewById(R.id.editTextEmailLogIn);
         editTextPasswordLogIn=findViewById(R.id.editTextPasswordLogIn);
         buttonLoginLogin=findViewById(R.id.buttonLoginLogin);
+        buttonRegisterLogin = findViewById(R.id.buttonRegisterLogin);
 
         buttonLoginLogin.setOnClickListener(this);
+        buttonRegisterLogin.setOnClickListener(this);
 
     }
 
@@ -35,23 +38,29 @@ public class LogIn_Form extends AppCompatActivity implements View.OnClickListene
 
             case R.id.buttonLoginLogin:
 
-                if (TextUtils.isEmpty(editTextEmailLogIn.getEditText().getText())) {
+                if (TextUtils.isEmpty(editTextEmailLogIn.getText().toString())) {
                     editTextEmailLogIn.setError("Enter Email Address Please");
                     editTextEmailLogIn.requestFocus();
                     return;
-                } else if (TextUtils.isEmpty(editTextPasswordLogIn.getEditText().getText())) {
+                } else if (TextUtils.isEmpty(editTextPasswordLogIn.getText().toString())) {
                     editTextPasswordLogIn.setError("Enter Password Please");
                     editTextPasswordLogIn.requestFocus();
                     return;
                 }else{
-                if(editTextEmailLogIn.getEditText().toString().equals("Admin") && editTextPasswordLogIn.getEditText().toString().equals("admin") ){
+                    Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+                if(editTextEmailLogIn.getText().toString().equals("Admin") && editTextPasswordLogIn.getText().toString().equals("admin") ){
                     Intent intent = new Intent(LogIn_Form.this,DashboardActivity.class);
                     startActivity(intent);
                     Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
                 }else{
                     Toast.makeText(this, "Wrong Username and Password", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-                }
+                }break;
+            case R.id.buttonRegisterLogin:
+                Intent intent2 =new Intent(LogIn_Form.this,Register_Form.class);
+                startActivity(intent2);
+                break;
 
 
 
